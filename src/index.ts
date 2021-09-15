@@ -1,11 +1,36 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+//Element queries
+const logout = <HTMLFormElement>document.querySelector('#logout-form');
+const loginForm = <HTMLFormElement>document.querySelector('#login-form');
+const signupForm = <HTMLFormElement>document.querySelector('#signup-form');
+const weight_view = <HTMLHeadingElement>document.querySelector('#weight-view');
+const thumbsUp = <HTMLDivElement>document.querySelector('#thumbs-up');
+const thumbsDown = <HTMLDivElement>document.querySelector('#thumbs-down');
+const username = <HTMLHeadingElement>document.querySelector('#username');
+const isAuthorized = document.querySelectorAll<HTMLElement>('.auth-only');
+const login = document.querySelectorAll<HTMLElement>('.login');
+const loginGoogle = <HTMLButtonElement>document.querySelector('#login-google');
+const signupGoogle = <HTMLButtonElement>(
+  document.querySelector('#signin-google')
+);
+const signUp = <HTMLDivElement>document.querySelector('#signup');
+const signUpToggle = <HTMLButtonElement>document.querySelector('#signuptoggle');
+const chart = <HTMLDivElement>document.querySelector('#container');
 
-import confetti from 'canvas-confetti';
+console.log(login);
 
-confetti.create(document.getElementById('canvas') as HTMLCanvasElement, {
-  resize: true,
-  useWorker: true,
-})({ particleCount: 200, spread: 200 });
+export {
+  logout,
+  login,
+  loginGoogle,
+  signupGoogle,
+  signUp,
+  signupForm,
+  signUpToggle,
+  loginForm,
+  weight_view,
+  thumbsUp,
+  thumbsDown,
+  username,
+  isAuthorized,
+  chart,
+};
