@@ -7,11 +7,12 @@ import {
   thumbsUp,
   thumbsDown,
   isAuthorized,
-  dataReq,
+  chart,
 } from './index';
-let dateOffset = 24 * 60 * 60 * 1000 * 30; //5 days
-let myDate = new Date();
-myDate.setTime(myDate.getTime() - dateOffset);
+
+// 90 days prior used to filter old data
+let backDate = new Date();
+backDate.setDate(backDate.getDate() - 90);
 
 let data: Weights[] = [];
 let userId: string = '';
@@ -36,14 +37,15 @@ Auth.onAuthStateChanged((user) => {
     });
     db.collection('user_weights')
       .where('userId', '==', user.uid)
-      // .where('date', '<=', myDate.toString())
       .orderBy('date')
       .onSnapshot((res) => {
         res.docChanges().map((change) => {
           const doc: any = { ...change.doc.data(), id: change.doc.id };
           switch (change.type) {
             case 'added':
-              data.push(doc);
+              if (new Date(doc.date) > backDate) {
+                data.push(doc);
+              }
               break;
             case 'modified':
               const index = data.findIndex((item) => item.id == doc.id);
@@ -59,13 +61,15 @@ Auth.onAuthStateChanged((user) => {
         update(data);
         console.log(data);
 
-        // If no data hide the bar chart
-        // if (data === []) {
-        //   chart.style.display = 'none';
-        // }
-
         //Get the most recent weight to display
-        weight_view.innerText = data[data.length - 1]?.weight.toString();
+        if (data.length <= 0) {
+          chart.style.display = 'none';
+          weight_view.innerText = '000';
+        } else {
+          chart.style.display = 'block';
+          weight_view.innerText = data[data.length - 1]?.weight.toString();
+        }
+
         // Compare last two weight entries and display thumbs up or down img
         if (data[data.length - 2]?.weight >= data[data.length - 1]?.weight) {
           thumbsDown.style.display = 'none';
