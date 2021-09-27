@@ -12,15 +12,21 @@ const loginGoogle = <HTMLButtonElement>document.querySelector('#login-google');
 const signupGoogle = <HTMLButtonElement>(
   document.querySelector('#signin-google')
 );
+const headToggle = <HTMLButtonElement>document.querySelector('#header-toggle');
 const signUp = <HTMLDivElement>document.querySelector('#signup');
 const signUpToggle = <HTMLButtonElement>document.querySelector('#signuptoggle');
 const chart = <HTMLDivElement>document.querySelector('#container');
-
-console.log(login);
+let error = <HTMLParagraphElement>document.getElementById('error');
+let errorBlock = <HTMLDivElement>document.getElementById('error-block');
+let formError = <HTMLDivElement>document.getElementById('form-error');
+let formErrorText = <HTMLParagraphElement>(
+  document.getElementById('form-error-text')
+);
 
 export {
   logout,
   login,
+  headToggle,
   loginGoogle,
   signupGoogle,
   signUp,
@@ -33,4 +39,8 @@ export {
   username,
   isAuthorized,
   chart,
+  error,
+  errorBlock,
+  formError,
+  formErrorText,
 };

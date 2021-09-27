@@ -8,11 +8,13 @@ import {
   thumbsDown,
   isAuthorized,
   chart,
+  formErrorText,
+  formError,
 } from './index';
 
-// 90 days prior used to filter old data
+// 60 days prior used to filter old data
 let backDate = new Date();
-backDate.setDate(backDate.getDate() - 90);
+backDate.setDate(backDate.getDate() - 60);
 
 let data: Weights[] = [];
 let userId: string = '';
@@ -84,7 +86,9 @@ Auth.onAuthStateChanged((user) => {
   } else {
     localStorage.removeItem('myPage.expectSignIn');
     login.forEach((el) => {
-      el.style.display = 'block';
+      if (el.id != 'modal') {
+        el.style.display = 'block';
+      }
     });
   }
 });
@@ -125,12 +129,14 @@ form.addEventListener('submit', (e) => {
         })
         .catch((err) => console.log(err));
     } else {
-      console.log(
-        'You already entered a weight for today!  If that was a mistake, use the chart to modify or delete the incorrect entry',
-      );
+      formErrorText.innerText =
+        'You already entered a weight for today!  If this is a mistake, use the chart to modify or delete the incorrect entry';
+      formError.style.display = 'block';
     }
   } else {
-    console.log('Please enter a valid weight');
+    formErrorText.innerText = 'Please enter a valid weight';
+
+    formError.style.display = 'block';
   }
 });
 

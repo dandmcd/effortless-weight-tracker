@@ -65,6 +65,7 @@
     <header class="login h-14 bg-gradient-to-r from-myLightBlue to-myBlue">
       <button
         class="absolute right-2 bg-myLight hover:bg-myLightBlue text-myText font-normal my-2 py-2 px-3 rounded-lg shadow-lg"
+        id="header-toggle"
       >
         Sign In
       </button>
@@ -127,6 +128,7 @@
     <!-- Sign up and Log in-->
     <div
       class="login bg-myLight text-myText absolute left-1/2 top-1/2 transform -translate-x-2/4 -translate-y-2/4 w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg z-50 overflow-y-auto"
+      id="modal"
       style="display: none"
     >
       <h1 class="text-xl font-normal text-center text-myBlue">
@@ -246,6 +248,14 @@
             id="input-weight"
             placeholder="Weight in lb or kg"
           />
+          <div
+            transition:fade
+            class="p-2 mb-6 bg-myDarkBlue"
+            style="display: none"
+            id="form-error"
+          >
+            <p id="form-error-text"></p>
+          </div>
           <button
             type="submit"
             id="submit-weight"

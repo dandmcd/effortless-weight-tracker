@@ -4,22 +4,26 @@ import {
   loginForm,
   logout,
   isAuthorized,
-  signUp,
-  signupForm,
   signUpToggle,
   loginGoogle,
-  signupGoogle,
+  error,
+  errorBlock,
+  headToggle,
 } from './index';
 
 //Error handler
-let error = <HTMLParagraphElement>document.getElementById('error');
-let errorBlock = <HTMLDivElement>document.getElementById('error-block');
 const errorHandler = (err: Error) => {
   error.innerText = err.message;
   errorBlock.style.display = 'block';
 };
 
-//Boolean toggle for login and signup modal
+headToggle.addEventListener('click', (e) => {
+  login.forEach((el) => {
+    el.style.display = 'block';
+  });
+});
+
+//Boolean toggle changes login to signup modal
 let isLogin = true;
 
 // logout
@@ -53,8 +57,7 @@ signUpToggle.addEventListener('click', (e) => {
   }
 });
 
-// login
-// const loginForm = <HTMLFormElement>document.querySelector('#login-form');
+// email login
 loginForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
