@@ -67,18 +67,14 @@ loginForm.addEventListener('submit', (e) => {
   // create and log the user in
   if (!isLogin) {
     Auth.createUserWithEmailAndPassword(email, password)
-      .then((cred) => {
-        console.log(cred.user);
-      })
+      .then((cred) => {})
       .catch((err: Error) => {
         errorHandler(err);
       });
   } else {
     // log the user in
     Auth.signInWithEmailAndPassword(email, password)
-      .then((cred) => {
-        console.log(cred.user);
-      })
+      .then((cred) => {})
       .catch((err: Error) => {
         errorHandler(err);
       });
@@ -92,7 +88,7 @@ loginGoogle.addEventListener('click', (e) => {
   Auth.signInWithPopup(provider)
     .then((result) => {})
     .catch((err) => {
-      error = err.message;
+      error.innerText = err.message;
     });
   //Hides login form after redirect
   localStorage.setItem('myPage.expectSignIn', '1');

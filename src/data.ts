@@ -20,7 +20,6 @@ let data: Weights[] = [];
 let userId: string = '';
 // Real-time data and reactive state observer
 Auth.onAuthStateChanged((user) => {
-  console.log(user);
   if (user) {
     localStorage.setItem('myPage.expectSignIn', '1');
     userId = user.uid;
@@ -61,7 +60,6 @@ Auth.onAuthStateChanged((user) => {
           }
         });
         update(data);
-        console.log(data);
 
         //Get the most recent weight to display
         if (data.length <= 0) {
@@ -80,8 +78,6 @@ Auth.onAuthStateChanged((user) => {
           thumbsUp.style.display = 'none';
           thumbsDown.style.display = 'block';
         }
-        console.log(data[data.length - 1]);
-        console.log(data);
       });
   } else {
     localStorage.removeItem('myPage.expectSignIn');

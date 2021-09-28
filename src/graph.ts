@@ -275,18 +275,7 @@ const update = (data: Weights[]) => {
         if (Number.isInteger(int) && Number(int) > 0) {
           const id = d.id;
           db.collection('user_weights').doc(id).update({ weight: int });
-        } else {
-          console.log('Not a positive number');
         }
-        // let str = parseInt(this.innerHTML);
-        // console.log(str);
-        // if (Number.isInteger(Number(str)) && Number(str) > 0) {
-        //   const id = d.id;
-        //   db.collection('user_weights').doc(id).update({ weight: str });
-        // } else {
-        //   console.log('Is Not');
-        // }
-        // event.innerHTML = '<input value="' + d.weight + '">';
         div
           .transition()
           .duration(200)
@@ -386,34 +375,6 @@ const update = (data: Weights[]) => {
     .selectAll('text')
     .attr('transform', 'rotate(-35)')
     .attr('text-anchor', 'end');
-
-  // x and y axis path styling
-  // xAxisGroup
-  //   .select('.domain')
-  //   .attr('class', 'stroke-current text-myBlue stroke-2');
-  // yAxisGroup
-  //   .select('.domain')
-  //   .attr('class', 'stroke-current text-myBlue stroke-2');
-
-  // // x and y axis tick
-  // xAxisGroup
-  //   .selectAll('.tick')
-  //   .attr('class', 'stroke-current text-myBright stroke-2')
-  //   .attr('class', 'font-thin text-myBright');
-
-  // yAxisGroup
-  //   .selectAll('.tick')
-  //   .attr('class', 'stroke-current text-colors-myBright stroke-2')
-  //   .attr('class', 'font-thin text-myBright');
 };
-// const handleClick = (event, d) => {
-//   console.log(d);
-//   const id = d.id;
-//   db.collection('user_weights').doc(id).delete();
-// };
 
-// const makeInput = (event, d) => {
-//   console.log(event);
-//   event.innerHTML = '<input value="' + event.innerText + '">';
-// };
 export { update };
