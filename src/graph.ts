@@ -22,7 +22,7 @@ const div = d3
   .append('div')
   .attr(
     'class',
-    'z-10 absolute text-center w-16 p-1 font-sans text-xs text-myLight bg-myDarkBlue rounded-lg',
+    'z-10 absolute text-center w-16 font-sans text-xs text-myLight bg-myDarkBlue rounded-lg',
   )
   .style('opacity', 0);
 
