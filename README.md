@@ -1,24 +1,14 @@
-# New Project
+# Effortless Weight Tracker
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+[Effortless Weight Tracker](https://teachery.herokuapp.com/) is an app built with Typescript, D3, and Firebase, designed to make it easy to effortlessly track your weight.
 
-## Available Scripts
+## Built With Modern Tooling
 
-### npm start
+> ✨ Bootstrapped with Create Snowpack App (CSA). Snowpack provides lightning quick build times and fast refresh, and designed to work closely with Typescript.
+> ✨ Typescript is used to make developing safer and easier than vanilla Javascript.
+> ✨ Tailwinds CSS was used experimentally to get a feel for this utility-first CSS framework
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+## App Features
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
-
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+> ✨ Graph built with D3, a JavsScript library for manipulating data to create visual diagrams, charts and so much more.
+> ✨ Authentication via Firebase with full CRUD functionality. Users have the ability to edit or remove data from their graph.
