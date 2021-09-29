@@ -85,7 +85,7 @@ loginForm.addEventListener('submit', (e) => {
 loginGoogle.addEventListener('click', (e) => {
   e.preventDefault();
 
-  Auth.signInWithPopup(provider)
+  Auth.signInWithRedirect(provider)
     .then((result) => {})
     .catch((err) => {
       error.innerText = err.message;
