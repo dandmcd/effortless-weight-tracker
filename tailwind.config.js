@@ -1,9 +1,5 @@
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ['./public/**/*.html', './src/**/*.js', './src/**/*.ts'],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ['./public/**/*.html', './src/**/*.js', './src/**/*.ts'],
   theme: {
     fontFamily: {
       body: ['Oswald', 'sans-serif'],
@@ -23,6 +19,5 @@ module.exports = {
       },
     },
   },
-  variants: {},
   plugins: [],
 };
