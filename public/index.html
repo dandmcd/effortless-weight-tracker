@@ -54,7 +54,17 @@
     }
   </style>
   <body
-    class="font-body relative bg-fixed bg-gradient-to-b from-myLight to-myLightBlue h-screen md:w-full max-w-7xl mx-auto"
+    class="
+      font-body
+      relative
+      bg-fixed bg-gradient-to-b
+      from-myLight
+      to-myLightBlue
+      h-screen
+      md:w-full
+      max-w-7xl
+      mx-auto
+    "
   >
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script type="module" src="/dist/index.js"></script>
@@ -64,7 +74,19 @@
     <!-- Header -->
     <header class="login h-14 bg-gradient-to-r from-myLightBlue to-myBlue">
       <button
-        class="absolute right-2 bg-myLight hover:bg-myLightBlue text-myText font-normal my-2 py-2 px-3 rounded-lg shadow-lg"
+        class="
+          absolute
+          right-2
+          bg-myLight
+          hover:bg-myLightBlue
+          text-myText
+          font-normal
+          my-2
+          py-2
+          px-3
+          rounded-lg
+          shadow-lg
+        "
         id="header-toggle"
       >
         Sign In
@@ -73,7 +95,22 @@
 
     <!-- Sign up and Log in-->
     <div
-      class="login bg-myLight text-myText absolute left-1/2 top-1/2 transform -translate-x-2/4 -translate-y-2/4 w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg z-50 overflow-y-auto"
+      class="
+        login
+        bg-myLight
+        text-myText
+        absolute
+        left-1/2
+        top-1/2
+        -translate-x-2/4 -translate-y-2/4
+        w-11/12
+        md:max-w-md
+        mx-auto
+        rounded-lg
+        shadow-lg
+        z-50
+        overflow-y-auto
+      "
       id="modal"
       style="display: none"
     >
@@ -86,7 +123,15 @@
             >Email</label
           >
           <input
-            class="input-field text-lg text-myMedText font-extralight bg-myLight border-solid border-2 border-myError rounded-lg focus:outline-none focus:border-myBlue"
+            class="
+              input-field
+              text-lg text-myMedText
+              font-extralight
+              bg-myLight
+              border-solid border-2 border-myError
+              rounded-lg
+              focus:outline-none focus:border-myBlue
+            "
             id="login-email"
             type="email"
             placeholder="name@acme.com"
@@ -97,7 +142,15 @@
             >Password</label
           >
           <input
-            class="input-field text-lg text-myMedText font-extralight bg-myLight border-solid border-2 border-myError rounded-lg focus:outline-none focus:border-myBlue"
+            class="
+              input-field
+              text-lg text-myMedText
+              font-extralight
+              bg-myLight
+              border-solid border-2 border-myError
+              rounded-lg
+              focus:outline-none focus:border-myBlue
+            "
             id="login-password"
             type="password"
             placeholder="******************"
@@ -130,7 +183,17 @@
     </div>
     <!--Logout-->
     <div
-      class="auth-only bg-myLight text-myText z-50 m-2 p-2 rounded-lg shadow-lg md:absolute md:text-lg md:top-0 md:right-0"
+      class="
+        auth-only
+        bg-myLight
+        text-myText
+        z-50
+        m-2
+        p-2
+        rounded-lg
+        shadow-lg
+        md:absolute md:text-lg md:top-0 md:right-0
+      "
       id="logout-form"
       style="display: none"
     >
@@ -144,7 +207,16 @@
     </div>
     <!--View last weight-->
     <div
-      class="auth-only font-bold relative z-0 flex items-center justify-center p-5"
+      class="
+        auth-only
+        font-bold
+        relative
+        z-0
+        flex
+        items-center
+        justify-center
+        p-5
+      "
     >
       <h1 class="text-9xl text-myText" id="weight-view"></h1>
       <svg
@@ -171,7 +243,22 @@
     <div>
       <!--Weight Entry Form-->
       <div
-        class="auth-only relative z-0 p-3 mb-1 rounded-lg shadow-lg bg-myDarkBlue text-myLight lg:max-w-md sm: max-w-none w-4/5 mx-auto"
+        class="
+          auth-only
+          relative
+          z-0
+          p-3
+          mb-1
+          rounded-lg
+          shadow-lg
+          bg-myDarkBlue
+          text-myLight
+          lg:max-w-md
+          sm:
+          max-w-none
+          w-4/5
+          mx-auto
+        "
         style="display: none"
       >
         <form id="weight-entry" class="p-2 flex flex-col mx-auto">
@@ -179,7 +266,17 @@
             >Enter Weight</label
           >
           <input
-            class="mt-1 mb-2 p-2 text-xl text-myMedText font-extralight placeholder-myLightText bg-myLight rounded-lg shadow-lg"
+            class="
+              mt-1
+              mb-2
+              p-2
+              text-xl text-myMedText
+              font-extralight
+              placeholder-myLightText
+              bg-myLight
+              rounded-lg
+              shadow-lg
+            "
             type="number"
             id="input-weight"
             placeholder="Weight in lb or kg"
@@ -195,7 +292,15 @@
           <button
             type="submit"
             id="submit-weight"
-            class="self-end my-2 px-3 bg-myBlue rounded-lg shadow-lg text-myLight"
+            class="
+              self-end
+              my-2
+              px-3
+              bg-myBlue
+              rounded-lg
+              shadow-lg
+              text-myLight
+            "
           >
             Submit
           </button>
@@ -211,7 +316,17 @@
       </div>
       <!--Splash Box-->
       <header
-        class="login relative pb-24 lg\:bg-myLightBlue overflow-hidden rounded-lg shadow-lg font-semibold opacity-100"
+        class="
+          login
+          relative
+          pb-24
+          lg\:bg-myLightBlue
+          overflow-hidden
+          rounded-lg
+          shadow-lg
+          font-semibold
+          opacity-100
+        "
       >
         <div class="p-6" id="content">
           <div class="p-6">
@@ -220,7 +335,11 @@
               src="./assets/graph.png"
             />
             <h1
-              class="bg-myLight bg-opacity-5 text-center text-myText text-6xl mt-11"
+              class="
+                bg-myLight bg-opacity-5
+                text-center text-myText text-6xl
+                mt-11
+              "
             >
               Effortlessly Track Your Weight
             </h1>
@@ -229,7 +348,25 @@
           <h2 class="text-myMedText text-center text-3xl font-normal my-5">
             Sign Up. Enter Weight. Keep Track.
           </h2>
-          <h2 class="text-2xl text-center font-extralight">
+          <div class="flex justify-center items-center">
+            <button
+              class="
+                bg-myLight
+                hover:bg-myLightBlue
+                text-myText
+                font-semibold
+                text-xl
+                my-2
+                p-5
+                rounded-lg
+                shadow-lg
+              "
+              id="header-toggle"
+            >
+              Sign Up Now
+            </button>
+          </div>
+          <h2 class="text-2xl text-center font-extralight my-5">
             No bloated features you'll never use. No ad trackers. Simply track
             your progress and go on with your day. View and edit your account
             from any device. Keep it effortless!
